@@ -5,10 +5,10 @@ id,lane,title,location,start,end,type
 8,1,High School N&T Profile,Dalton Voorburg,31-08-2008,30-06-2013,education
 9,1,Middle School,Dalton de Tandem,30-07-2001,30-06-2008,education
 10,1,Chinese Language Exchange,Sichaun University,20-02-2018,30-08-2018,education
-11,1,Data visualisation Intern,Motek Medical,30-08-2015,30-12-2015,work
+11,1,Data visualisation Intern,Motek Medical,30-08-2015,30-12-2015,projects
 12,1,Sales Assistant,BCC,01-01-2015,01-04-2016,work
-13,1,Sales Assistant,MediaMarkt,02-04-2016,01-10-2017
-14,1,Curator,DigitalMR,11-11-2015,25-02-2019
-15,1,Support analysis intern,EXO-L,11-11-2016,25-03-2017
-16,1,Machine learning graduation project,EXO-L,26-03-2017, 10-11-2017
-17,1,Natural finger movement function project,Adjuvo Motion,25-02-2015,11-07-2015
+13,1,Sales Assistant,MediaMarkt,02-04-2016,01-10-2017,work
+14,1,Curator,DigitalMR,01-01-2018,25-02-2019,work
+15,1,Support analysis intern,EXO-L,11-11-2016,25-03-2017,projects
+16,1,Machine learning graduation project,EXO-L,26-03-2017, 10-11-2017,projects
+17,1,Natural finger movement function project,Adjuvo Motion,25-02-2015,11-07-2015,projects
