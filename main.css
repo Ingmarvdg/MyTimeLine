@@ -1,0 +1,86 @@
+body {
+    background-color: lightgrey;
+}
+
+h1 {
+    font-family: 'Montserrat 800', sans-serif;
+    font-size: 70px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.header {
+    padding-top: 20px;
+}
+
+.main {
+    display: block;
+    transform: translate(120,20);
+}
+
+.chart {
+    shape-rendering: crispEdges;
+}
+
+.miniItem0 {
+    fill: darksalmon;
+    stroke-width: 6;
+}
+
+.miniItem1 {
+    fill: darkolivegreen;
+    fill-opacity: .7;
+    stroke-width: 6;
+}
+
+.miniItem2 {
+    fill: slategray;
+    fill-opacity: .7;
+    stroke-width: 6;
+}
+
+.brush .selection {
+    stroke: gray;
+    fill: dodgerblue;
+    fill-opacity: .365;
+}
+
+.mainrect {
+    fill-opacity: .5;
+}
+
+.minirect {
+    fill-opacity: 0.5;
+}
+
+.label {
+    fill: black;
+}
+
+#work {
+    fill: blue;
+}
+
+#education {
+    fill: red;
+}
+
+#projects {
+    fill: green;
+}
+
+#other {
+    fill: purple;
+}
+
+.flagrect {
+    fill-opacity: 0.75;
+}
+
+.labels p {
+    margin-bottom: 0;
+}
+

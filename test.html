@@ -1,0 +1,103 @@
+<!--
+  Source:  https://gist.github.com/erikvullings/41be28677574fd484b43e91413a7e45d
+  Preview: https://bl.ocks.org/erikvullings/41be28677574fd484b43e91413a7e45d
+-->
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <style>
+        body {
+            font: 10px sans-serif;
+        }
+        .axis text {
+            font-size: 1.5em;
+        }
+
+        .axis line {
+            shape-rendering: crispEdges;
+            stroke: #000;
+            stroke-width: 3px;
+        }
+
+        /* Below, we set the tick length to 10px. The stroke-dasharray only displays 6px to create a minor tick effect. */
+        .axis .minor line {
+            stroke: #777;
+            stroke-width: 1px;
+            stroke-dasharray: 6,4;
+        }
+    </style>
+</head>
+<style>
+    body {
+        font: 10px sans-serif;
+        shape-rendering: crispEdges;
+    }
+
+    .grid-background {
+        fill: #ddd;
+    }
+
+    .grid line {
+        stroke: #fff;
+    }
+
+    .grid .minor line {
+        stroke-opacity: .5;
+    }
+
+    .grid text {
+        display: none;
+    }
+
+    .axis line {
+        stroke: #000;
+    }
+
+    .axis path,
+    .grid path {
+        display: none;
+    }
+</style>
+
+<body>
+<script>
+
+    var margin = {top: 200, right: 10, bottom: 200, left: 10},
+        width = 960 - margin.right - margin.left,
+        height = 500 - margin.top - margin.bottom;
+
+    var x = d3.scaleLinear()
+        .domain([.05, .95])
+        .range([0, width]);
+
+    var y = d3.scaleLinear()
+        .range([0, height]);
+
+    var svg = d3.select("body").append("svg")
+        .attr("width", width + margin.right + margin.left)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    svg.append("rect")
+        .attr("class", "grid-background")
+        .attr("width", width)
+        .attr("height", height);
+
+    svg.append("g")
+        .attr("class", "grid")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom().scale(x).ticks(20).tickSize(-height))
+        .selectAll(".tick")
+        .data(x.ticks(10), function(d) { return d; })
+        .exit()
+        .classed("minor", true);
+
+    svg.append("g")
+        .attr("class", "axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom().scale(x).ticks(10));
+</script>
+</body>
